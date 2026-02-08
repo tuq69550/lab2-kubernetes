@@ -43,7 +43,7 @@ This screenshot shows the creation of the nginx, server, and client pods within 
 
 ### 07 – Verifying Nodes
 ![Verifying Nodes](screenshots/07-verifying-nodes.png)
-This screenshot confirms that the nodes are active and ready to schedule and run pods.
+This screenshot confirms that the nodes are active and ready to run pods.
 
 ---
 
@@ -55,13 +55,13 @@ This screenshot verifies that the nginx web server is running correctly inside t
 
 ### 09 – Server Pod IP
 ![Server Pod IP](screenshots/09-server-pod-ip.png)
-This screenshot displays the internal IP address assigned to the server pod, which is needed for direct pod-to-pod communication.
+This screenshot displays the internal IP address assigned to the server pod, which is needed for the direct pod-to-pod communication.
 
 ---
 
 ### 10 – Pod-to-Pod Communication
 ![Pod to Pod Curl](screenshots/10-server-pod-ip-curl.png)
-This screenshot demonstrates successful communication from the client pod to the server pod using the server pod’s internal IP address.
+This screenshot demonstrates the communication from the client pod to the server pod using the server pod’s internal IP address.
 
 ---
 
@@ -103,13 +103,13 @@ This screenshot confirms that the client pod can successfully access the server 
 
 ### 17 – Multiple Service Requests
 ![Multiple Curl](screenshots/17-curl-multiple-request.png)
-This screenshot shows multiple successful requests sent through the service, confirming stable routing.
+This screenshot shows multiple requests sent through the service, confirming it's stable.
 
 ---
 
 ### 18 – Resource Deletion
 ![Delete Resources](screenshots/18-delete.png)
-This screenshot documents the deletion of Kubernetes resources such as pods and services as part of cleanup.
+This screenshot verifies the deletion of pods and services as part of the cleanup.
 
 ---
 
