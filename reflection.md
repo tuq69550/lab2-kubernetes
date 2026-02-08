@@ -1,0 +1,10 @@
+1. What challenges might occur when managing services with only Docker as the system grows?
+When only using Docker, managing multiple containers becomes difficult because each container must be started, stopped, networked, and monitored manually. As the number of services grows, it is way harder to handle failures, restarts, and communication between the containers. Kubernetes solves this issue by automatically managing pods, networking, and restarts, which also made the lab much easier than handling everything manually.
+2. What is a Pod and why is it the smallest deployable unit in Kubernetes?
+A Pod is the smallest deployable unit in Kubernetes, and usually contains one container along with its networking configuration. Kubernetes keeps Pods as the basic unit because each Pod gets its own IP address. In the lab, each pod was scheduled and managed by Kubernetes, showing how pods make deployment and communication much easier.
+3. Why are Services needed in Kubernetes?
+Services are needed because pod IP addresses can change when pods are restarted or recreated. A Service provides a stable IP address and name that other pods can use to communicate. During the lab, the server-service allowed the client pod to access the server without using a pod IP directly.
+4. How does DNS-based service discovery work in Kubernetes?
+Kubernetes automatically registers Services in its internal DNS system. When a Service is created, pods can resolve the service name to its ClusterIP using DNS. This was verified by using nslookup and successfully accessing the server using the service name instead of an IP address.
+5. Why is Kubernetes better suited for microservices than a single large system?
+Kubernetes is better for microservices because it manages scaling, networking, and failures automatically. Each service can run independently while still communicating through Services and DNS. This lab demonstrated how Kubernetes makes managing multiple services easier and more reliable than running everything as one large system.
